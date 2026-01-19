@@ -1,4 +1,6 @@
-.body {
+
+body {
+    border: 0;
     margin: 0;
     background-color: black;
 }
@@ -73,23 +75,19 @@
     margin-top: 1em;
 }
 
-/* APPLICATO A ENTRAMBI: Rotation e Album ora scorrono orizzontalmente */
 .rotation,
 .album {
     display: flex;
     flex-direction: row;
-    /* In riga */
     flex-wrap: nowrap;
-    /* No a capo */
     overflow-x: auto;
-    /* Scorrimento attivo */
     gap: 1.5em;
     padding: 1em;
     scroll-behavior: smooth;
     width: 100%;
 }
 
-/* Stile barra di scorrimento per entrambi */
+
 .rotation::-webkit-scrollbar,
 .album::-webkit-scrollbar {
     height: 6px;
@@ -101,11 +99,10 @@
     border-radius: 10px;
 }
 
-/* APPLICATO A ENTRAMBI: Dimensioni fisse per le card */
+
 .single-rotation,
 .single-album {
     flex: 0 0 200px;
-    /* Ripristinato a dimensione fissa per lo scorrimento */
     display: flex;
     flex-direction: column;
     align-items: center;
