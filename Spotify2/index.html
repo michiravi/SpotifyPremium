@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="shortcut icon" href="./favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b061338669.js" crossorigin="anonymous"></script>
+    <script src="clonespotify.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a id="Home" class="link"><i class="fa-solid fa-house"></i> Home</a>
+        <a class="link"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a class="link" href="likeplaylist.html"><img src="likesong.jpg" id="img-like">Liked Songs</a>
+        <div class="playlist">
+            <h4>PLAYLISTS</h4>
+        </div>
+        <a class="link"><i class="fa-solid fa-plus"></i> Create playlist</a>
+        <hr id="linea">
+        <a class="link">2024 Greatest Song</a>
+        <a class="link">At Work</a>
+        <a class="link">Playlist #1</a>
+        <a class="link">Playlist #2</a>
+        <a class="link">Rap Caviar</a>
+    </div>
+
+    <div id="home-container" class="right attivo">
+        <div class="high">
+            <img src="./favicon.png" id="favicon-mini">
+            <button class="circle">Wrapped</button>
+            <button class="circle">Playlist</button>
+            <button class="circle">Podcast</button>
+            <select class="circle">
+                <option>Michi Ravi</option>
+            </select>
+        </div>
+        <div class="totsong">
+            <div class="song2">
+                <div class="block">
+                    <div class="suggerimenti">
+                        <img src="Release.jpg" class="img">
+                        <h4>Release Radar</h4>
+                    </div>
+                    <div class="suggerimenti">
+                        <img src="Weeknd.jpg" class="img">
+                        <h4>This is The Weeknd</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="song2">
+                <div class="block">
+                    <div class="suggerimenti">
+                        <img src="Discover.jpg" class="img">
+                        <h4>Discover Weekly</h4>
+                    </div>
+                    <div class="suggerimenti">
+                        <img src="Daily1.jpg" class="img">
+                        <h4>Daily Mix 1</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="song2">
+                <div class="block">
+                    <div class="suggerimenti">
+                        <img src="Daily2.jpg" class="img">
+                        <h4>Daily Mix 2</h4>
+                    </div>
+                    <div class="suggerimenti">
+                        <img src="Top.jpg" class="img">
+                        <h4>Top 50 Italia</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>I tuoi Album preferiti</h1>
+        <div class="album">
+            <div class="single-album">
+                <button onclick="mostra('bellavita-container')" class="link">
+                    <img src="ascolto.jpg">
+                    <h3>LA BELLA VITA</h3>
+                    <h5>Artie 5ive</h5>
+                </button>
+            </div>
+            <div class="single-album">
+                <button onclick="mostra('big5-container')" class="link">
+                    <img src="7eleven.png">
+                    <h3>BIG 5 - EP</h3>
+                    <h5>Artie 5ive</h5>
+                </button>
+            </div>
+            <div class="single-album">
+                <button onclick="mostra('lacura-container')" class="link">
+                    <img src="22lacura.jpg">
+                    <h3>La Cura</h3>
+                    <h5>22simba</h5>
+                </button>
+            </div>
+            <div class="single-album">
+                <button onclick="mostra('progettox-container')" class="link">
+                    <img src="progettox.jpg">
+                    <h3>PROGETTO X DELUXE</h3>
+                    <h5>LILCR</h5>
+                </button>
+            </div>
+            <div style="display: none;" id="song-album">
+                <audio id="montecarlo">
+                    <source src="montecarlo.mp3">
+                </audio>
+                <audio id="brazy">
+                    <source src="brazy.mp3">
+                </audio>
+                <audio id="ogniamicomio">
+                    <source src="ogniamicomio.mp3">
+                </audio>
+                <audio id="sognoamericano">
+                    <source src="sognoamericano.mp3">
+                </audio>
+                <audio id="fwss">
+                    <source src="fwss.mp3">
+                </audio>
+                <audio id="tu">
+                    <source src="tu.mp3">
+                </audio>
+                <audio id="areyoucrazy">
+                    <source src="areyoucrazy.mp3">
+                </audio>
+                <audio id="dodgedurango">
+                    <source src="dodgedurango.mp3">
+                </audio>
+                <audio id="litorale">
+                    <source src="litorale.mp3">
+                </audio>
+                <audio id="milanoaferragosto">
+                    <source src="milanoaferragosto.mp3">
+                </audio>
+                <audio id="pieta">
+                    <source src="pieta.mp3">
+                </audio>
+                <audio id="mama">
+                    <source src="mama.mp3">
+                </audio>
+                <audio id="igot2go">
+                    <source src="igot2go.mp3">
+                </audio>
+            </div>
+
+        </div>
+
+        <h1 class="message">Your heavy rotation</h1>
+
+        <div class="rotation">
+            <div class="single-rotation">
+                <img src="ascolto.jpg">
+                <h3>DAVVERODAVVERO</h3>
+                <h5>Artie 5ive</h5>
+                <audio id="davverodavvero">
+                    <source src="davverodavvero.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="togglePlay('davverodavvero')" class="play-btn"><i
+                        class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="single-rotation">
+                <img src="emis.jpg">
+                <h3>MUSICA TRISTE</h3>
+                <h5>Emis Killa</h5>
+                <audio id="musicatriste">
+                    <source src="musicatriste.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="togglePlay('musicatriste')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="single-rotation">
+                <img src="money.jpg">
+                <h3>MONEY</h3>
+                <h5>Sayf, Artie 5ive e Guè</h5>
+                <audio id="money">
+                    <source src="money.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="togglePlay('money')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="single-rotation">
+                <img src="7eleven.png">
+                <h3>7ELEVEN</h3>
+                <h5>Artie 5ive</h5>
+                <audio id="eleven">
+                    <source src="7eleven.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="togglePlay('eleven')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="single-rotation">
+                <img src="ascolto.jpg">
+                <h3>INTRO (La Bella Vita)</h3>
+                <h5>Artie 5ive</h5>
+                <audio id="intro">
+                    <source src="intro.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="togglePlay('intro')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="single-rotation">
+                <img src="gem.jpg">
+                <h3>Brother & Sister</h3>
+                <h5>Gemitaiz, Coez</h5>
+                <audio id="fratello">
+                    <source src="brother.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="togglePlay('fratello')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="single-rotation">
+                <img src="22lacura.jpg">
+                <h3>Non moriremo qui</h3>
+                <h5>22simba</h5>
+                <audio id="morire">
+                    <source src="morire.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="togglePlay('morire')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="single-rotation">
+                <img src="22lacura.jpg">
+                <h3>Il Primo</h3>
+                <h5>22simba</h5>
+                <audio id="primo">
+                    <source src="primo.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="togglePlay('primo')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="single-rotation">
+                <img src="22lacura.jpg">
+                <h3>La cura</h3>
+                <h5>22simba</h5>
+                <audio id="cura">
+                    <source src="cura.mp3" type="audio/mpeg">
+                </audio>
+                <button onclick="togglePlay('cura')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+        </div>
+    </div> <!-- CHIUSURA DIV HOME  -->
+
+    <div id="bellavita-container" class="right">
+        <div class="bellavita-background">
+            <button onclick="mostra('home-container')" class="circle"><i class="fa-solid fa-angle-left"></i></button>
+            <div class="bellavita-high">
+                <img src="ascolto.jpg">
+            </div>
+            <div class="bellavita-option">
+                <div class="bellavita-left">
+                    <h3>LA BELLAVITA</h3>
+                    <div class="flex">
+                        <img src="ascolto.jpg" id="img-artie">
+                        <h4>Artie 5ive</h4>
+                    </div>
+                    <h5 class="flex">Album <i class="fa-solid fa-circle" id="pallino"></i> 28 mar 2025</h5>
+                    <div class="flex2">
+                        <button style="background-color: transparent;  font-size: 1.5em;" class="circle"><i
+                                class="fa-regular fa-square-plus"></i></button>
+                        <button style="background-color: transparent;  font-size: 1.5em;" class="circle"><i
+                                class="fa-regular fa-circle-down"></i></button>
+                        <button style="background-color: transparent; font-size: 1.5em;" class="circle"><i
+                                class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                </div>
+                <div class="bellavita-right">
+                    <button onclick="togglePlay('intro')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="bellavita-songs">
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('intro')" class="play">
+                    <div>
+                        <h3>INTRO (La Bella Vita)</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('montecarlo')" class="play">
+                    <div>
+                        <h3>MONTECARLO</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('brazy')" class="play">
+                    <div>
+                        <h3>BRAZY (feat. Tony Boy)</h3>
+                        <h5>Artie 5ive, Tony Boy</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('ogniamicomio')" class="play">
+                    <div>
+                        <h3>OGNI AMICO MIO </h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('sognoamericano')" class="play">
+                    <div>
+                        <h3>SOGNO AMERICANO</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('fwss')" class="play">
+                    <div>
+                        <h3>FW/SS25 (Freestyle)</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('tu')" class="play">
+                    <div>
+                        <h3>TU</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('areyoucrazy')" class="play">
+                    <div>
+                        <h3>ARE YOU CRAZY? (feat. Capo Plaza)</h3>
+                        <h5>Artie 5ive, Capo Plaza</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('dodgedurango')" class="play">
+                    <div>
+                        <h3>DODGE DURANGO</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('litorale')" class="play">
+                    <div>
+                        <h3>LITORALE (feat. Guè)</h3>
+                        <h5>Artie 5ive, Guè</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('davverodavvero')" class="play">
+                    <div>
+                        <h3>DAVVERODAVVERO</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('milanoaferragosto')" class="play">
+                    <div>
+                        <h3>MILANO A FERRAGOSTO</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('pieta')" class="play">
+                    <div>
+                        <h3>PIETA (feat. Kid Yugi)</h3>
+                        <h5>Artie 5ive, Kid Yugi</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('mama')" class="play">
+                    <div>
+                        <h3>MAMA</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('igot2go')" class="play">
+                    <div>
+                        <h3>I GOT 2 GO</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+        </div>
+    </div> <!--   CHIUSURA BELLAVITA CONTAINER  -->
+
+    <div id="big5-container" class="right">
+        <div class="bellavita-background">
+            <button onclick="mostra('home-container')" class="circle"><i class="fa-solid fa-angle-left"></i></button>
+            <div class="bellavita-high">
+                <img src="7eleven.png">
+            </div>
+            <div class="bellavita-option">
+                <div class="bellavita-left">
+                    <h3>BIG 5</h3>
+                    <div class="flex">
+                        <img src="ascolto.jpg" id="img-artie">
+                        <h4>Artie 5ive</h4>
+                    </div>
+                    <h5 class="flex">Album <i class="fa-solid fa-circle" id="pallino"></i> 18 lug 2025</h5>
+                    <div class="flex2">
+                        <button style="background-color: transparent;  font-size: 1.5em;" class="circle"><i
+                                class="fa-regular fa-square-plus"></i></button>
+                        <button style="background-color: transparent;  font-size: 1.5em;" class="circle"><i
+                                class="fa-regular fa-circle-down"></i></button>
+                        <button style="background-color: transparent; font-size: 1.5em;" class="circle"><i
+                                class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                </div>
+                <div class="bellavita-right">
+                    <button onclick="togglePlay('eleven')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="bellavita-songs">
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('eleven')" class="play">
+                    <div>
+                        <h3>7ELEVEN</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('marlboro')" class="play">
+                    <div>
+                        <h3>MARLBORO</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('lifeislife')" class="play">
+                    <div>
+                        <h3>LIFE IS LIFE (feat. Nerissima Serpe & Papa V)</h3>
+                        <h5>Artie 5ive, Nerissima Serpe, Papa V</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('fuciliemacchinoni')" class="play">
+                    <div>
+                        <h3>FUCILI & MACCHINONI</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('malavita')" class="play">
+                    <div>
+                        <h3>MALAVITA</h3>
+                        <h5>Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+        </div>
+    </div> <!--   CHIUSURA BIG 5 CONTAINER  -->
+
+    <div id="lacura-container" class="right">
+        <div class="progettox-background">
+            <button onclick="mostra('home-container')" class="circle"><i class="fa-solid fa-angle-left"></i></button>
+            <div class="bellavita-high">
+                <img src="22lacura.jpg">
+            </div>
+            <div class="bellavita-option">
+                <div class="bellavita-left">
+                    <h3>La Cura</h3>
+                    <div class="flex">
+                        <img src="22simba.jpg" id="img-artie">
+                        <h4>22simba</h4>
+                    </div>
+                    <h5 class="flex">Album <i class="fa-solid fa-circle" id="pallino"></i> 25 dic 2025</h5>
+                    <div class="flex2">
+                        <button style="background-color: transparent;  font-size: 1.5em;" class="circle"><i
+                                class="fa-regular fa-square-plus"></i></button>
+                        <button style="background-color: transparent;  font-size: 1.5em;" class="circle"><i
+                                class="fa-regular fa-circle-down"></i></button>
+                        <button style="background-color: transparent; font-size: 1.5em;" class="circle"><i
+                                class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                </div>
+                <div class="bellavita-right">
+                    <button onclick="togglePlay('weshine')" class="play-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="bellavita-songs">
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('weshine')" class="play">
+                    <div>
+                        <h3>We Shine</h3>
+                        <h5>22simba</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('cura')" class="play">
+                    <div>
+                        <h3>La cura</h3>
+                        <h5>22simba</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('primo')" class="play">
+                    <div>
+                        <h3>Il Primo</h3>
+                        <h5>22simba</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('fammiunsorriso')" class="play">
+                    <div>
+                        <h3>Fammi Un Sorriso</h3>
+                        <h5>22simba</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('fanculo')" class="play">
+                    <div>
+                        <h3>Fanculo (feat. Marracash)</h3>
+                        <h5>22simba, Marracash</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('cornici')" class="play">
+                    <div>
+                        <h3>Cornici</h3>
+                        <h5>22simba</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('4zeri')" class="play">
+                    <div>
+                        <h3>4 Zeri (feat. Silent Bob)</h3>
+                        <h5>22simba, Silent Bob</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('tidiro')" class="play">
+                    <div>
+                        <h3>Ti Dirò</h3>
+                        <h5>22simba</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('5zeri')" class="play">
+                    <div>
+                        <h3>5 Zeri</h3>
+                        <h5>22simba</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('morire')" class="play">
+                    <div>
+                        <h3>Non Moriremo Qui</h3>
+                        <h5>22simba</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="progettox-container" class="right">
+        <div class="progettox-background">
+            <button onclick="mostra('home-container')" class="circle"><i class="fa-solid fa-angle-left"></i></button>
+            <div class="bellavita-high">
+                <img src="progettox.jpg">
+            </div>
+            <div class="bellavita-option">
+                <div class="bellavita-left">
+                    <h3>PROGETTO X DELUXE</h3>
+                    <div class="flex">
+                        <img src="lilcr.jpg" id="img-artie">
+                        <h4>LILCR</h4>
+                    </div>
+                    <h5 class="flex">Album <i class="fa-solid fa-circle" id="pallino"></i> 12 dic 2025</h5>
+                    <div class="flex2">
+                        <button style="background-color: transparent;  font-size: 1.5em;" class="circle"><i
+                                class="fa-regular fa-square-plus"></i></button>
+                        <button style="background-color: transparent;  font-size: 1.5em;" class="circle"><i
+                                class="fa-regular fa-circle-down"></i></button>
+                        <button style="background-color: transparent; font-size: 1.5em;" class="circle"><i
+                                class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                </div>
+                <div class="bellavita-right">
+                    <button onclick="togglePlay('carteintavola')" class="play-btn"><i
+                            class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="bellavita-songs">
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('carteintavola')" class="play">
+                    <div>
+                        <h3>CARTE IN TAVOLA</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('strano')" class="play">
+                    <div>
+                        <h3>SNAKES N SHARKS (feat. 163Margs)</h3>
+                        <h5>LILCR, 163Margs</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('ferrari')" class="play">
+                    <div>
+                        <h3>FERRARI</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('martedigrasso')" class="play">
+                    <div>
+                        <h3>MARTEDI GRASSO (feat. Diss Gacha)</h3>
+                        <h5>LILCR, Diss Gacha</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('ditomedio')" class="play">
+                    <div>
+                        <h3>DITO MEDIO</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('robertoesofia')" class="play">
+                    <div>
+                        <h3>ROBERTO & SOFIA</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('passanoleore')" class="play">
+                    <div>
+                        <h3>PASSANO LE ORE</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('uomocattivo')" class="play">
+                    <div>
+                        <h3>UOMO CATTIVO (feat. Nabi)</h3>
+                        <h5>LILCR, Nabi</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('maredipeccati')" class="play">
+                    <div>
+                        <h3>MARE DI PECCATI</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('mestesso')" class="play">
+                    <div>
+                        <h3>ME STESSO</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('bettyboop')" class="play">
+                    <div>
+                        <h3>BETTY BOOP (feat. Artie 5ive)</h3>
+                        <h5>LILCR, Artie 5ive</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('fastlane')" class="play">
+                    <div>
+                        <h3>FAST LANE (feat. Enny P)</h3>
+                        <h5>LILCR, Enny P</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('bigceo')" class="play">
+                    <div>
+                        <h3>BIG CEO</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('sofiaeroberto')" class="play">
+                    <div>
+                        <h3>SOFIA & ROBERTO</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+            <div class="bellavita-singlesong">
+                <button onclick="togglePlay('alisullaschiena')" class="play">
+                    <div>
+                        <h3>ALI SULLA SCHIENA</h3>
+                        <h5>LILCR</h5>
+                    </div>
+                    <button class="circle"><i class="fa-solid fa-ellipsis"></i></button>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
