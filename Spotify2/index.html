@@ -7,6 +7,8 @@
     <title>Spotify</title>
     <link rel="shortcut icon" href="./favicon.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/b061338669.js" crossorigin="anonymous"></script>
     <script src="clonespotify.js"></script>
 </head>
@@ -27,7 +29,7 @@
         <a class="link">Playlist #2</a>
         <a class="link">Rap Caviar</a>
     </div>
-
+    <div id="song-album" style="display: none;"></div>
     <div id="home-container" class="right attivo">
         <div class="high">
             <img src="./favicon.png" id="favicon-mini">
@@ -106,53 +108,6 @@
                     <h5>LILCR</h5>
                 </button>
             </div>
-            <div style="display: none;" id="song-album">
-                <audio id="montecarlo" data-title="MONTECARLO" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="montecarlo.mp3">
-                </audio>
-                <audio id="brazy" data-title="BRAZY (feat. Tony Boy)" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="brazy.mp3">
-                </audio>
-                <audio id="ogniamicomio" data-title="OGNI AMICO MIO" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="ogniamicomio.mp3">
-                </audio>
-                <audio id="sognoamericano" data-title="SOGNO AMERICANO" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="sognoamericano.mp3">
-                </audio>
-                <audio id="fwss" data-title="FW/SS25 (Freestyle)" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="fwss.mp3">
-                </audio>
-                <audio id="tu" data-title="TU" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="tu.mp3">
-                </audio>
-                <audio id="areyoucrazy" data-title="ARE YOU CRAZY? (feat. Capo Plaza)" data-artist="Artie 5ive"
-                    data-img="ascolto.jpg">
-                    <source src="areyoucrazy.mp3">
-                </audio>
-                <audio id="dodgedurango" data-title="DODGE DURANGO" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="dodgedurango.mp3">
-                </audio>
-                <audio id="litorale" data-title="LITORALE" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="litorale.mp3">
-                </audio>
-                <audio id="milanoaferragosto" data-title="MILANO A FERRAGOSTO" data-artist="Artie 5ive"
-                    data-img="ascolto.jpg">
-                    <source src="milanoaferragosto.mp3">
-                </audio>
-                <audio id="pieta" data-title="PIETA (feat. Kid Yugi)" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="pieta.mp3">
-                </audio>
-                <audio id="mama" data-title="MAMA" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="mama.mp3">
-                </audio>
-                <audio id="igot2go" data-title="I GOT 2 GO" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="igot2go.mp3">
-                </audio>
-                <audio id="davverodavvero" data-title="DAVVERODAVVERO" data-artist="Artie 5ive" data-img="ascolto.jpg">
-                    <source src="davverodavvero.mp3">
-                </audio>
-            </div>
-
         </div>
 
         <h1 class="message">Your heavy rotation</h1>
@@ -162,7 +117,7 @@
                 <img src="ascolto.jpg">
                 <h3>DAVVERODAVVERO</h3>
                 <h5>Artie 5ive</h5>
-                <audio id="davverodavvero">
+                <audio id="davverodavvero" data-title="DAVVERODAVVERO" data-artist="Artie 5ive" data-img="ascolto.jpg">
                     <source src="davverodavvero.mp3" type="audio/mpeg">
                 </audio>
                 <button onclick="togglePlay('davverodavvero')" class="play-btn"><i
@@ -172,7 +127,7 @@
                 <img src="emis.jpg">
                 <h3>MUSICA TRISTE</h3>
                 <h5>Emis Killa</h5>
-                <audio id="musicatriste" data-title="MUSICA TRISTE" data-artist="Emis Killa">
+                <audio id="musicatriste" data-title="MUSICA TRISTE" data-artist="Emis Killa" data-img="emis.jpg">
                     <source src="musicatriste.mp3" type="audio/mpeg">
                 </audio>
                 <button onclick="togglePlay('musicatriste')" class="play-btn"><i class="fa-solid fa-play"></i></button>
@@ -181,7 +136,7 @@
                 <img src="money.jpg">
                 <h3>MONEY</h3>
                 <h5>Sayf, Artie 5ive e Guè</h5>
-                <audio id="money" data-title="MONEY" data-artist="Sayf, Artie 5ive e Guè">
+                <audio id="money" data-title="MONEY" data-artist="Sayf, Artie 5ive e Guè" data-img="money.jpg">
                     <source src="money.mp3" type="audio/mpeg">
                 </audio>
                 <button onclick="togglePlay('money')" class="play-btn"><i class="fa-solid fa-play"></i></button>
@@ -190,7 +145,7 @@
                 <img src="7eleven.png">
                 <h3>7ELEVEN</h3>
                 <h5>Artie 5ive</h5>
-                <audio id="eleven">
+                <audio id="eleven" data-title="7/ELEVEN" data-artist="Artie 5ive" data-img="7eleven.png">
                     <source src="7eleven.mp3" type="audio/mpeg">
                 </audio>
                 <button onclick="togglePlay('eleven')" class="play-btn"><i class="fa-solid fa-play"></i></button>
@@ -199,7 +154,7 @@
                 <img src="ascolto.jpg">
                 <h3>INTRO (La Bella Vita)</h3>
                 <h5>Artie 5ive</h5>
-                <audio id="intro" data-title="INTRO (La Bella Vita)" data-artist="Artie 5ive">
+                <audio id="intro" data-title="INTRO (La Bella Vita)" data-artist="Artie 5ive" data-img="ascolto.jpg">
                     <source src="intro.mp3" type="audio/mpeg">
                 </audio>
                 <button onclick="togglePlay('intro')" class="play-btn"><i class="fa-solid fa-play"></i></button>
@@ -208,7 +163,7 @@
                 <img src="gem.jpg">
                 <h3>Brother & Sister</h3>
                 <h5>Gemitaiz, Coez</h5>
-                <audio id="fratello" data-title="Brother & Sister" data-artist="Gemitaiz, Coez">
+                <audio id="fratello" data-title="Brother & Sister" data-artist="Gemitaiz, Coez" data-img="gem.jpg">
                     <source src="brother.mp3" type="audio/mpeg">
                 </audio>
                 <button onclick="togglePlay('fratello')" class="play-btn"><i class="fa-solid fa-play"></i></button>
@@ -217,7 +172,7 @@
                 <img src="22lacura.jpg">
                 <h3>Non Moriremo qui</h3>
                 <h5>22simba</h5>
-                <audio id="morire" data-title="Non Moriremo qui" data-artist="22simba">
+                <audio id="morire" data-title="Non Moriremo qui" data-artist="22simba" data-img="22lacura.jpg">
                     <source src="morire.mp3" type="audio/mpeg">
                 </audio>
                 <button onclick="togglePlay('morire')" class="play-btn"><i class="fa-solid fa-play"></i></button>
@@ -226,7 +181,7 @@
                 <img src="22lacura.jpg">
                 <h3>Il Primo</h3>
                 <h5>22simba</h5>
-                <audio id="primo" data-title="Il Primo" data-artist="22simba">
+                <audio id="primo" data-title="Il Primo" data-artist="22simba" data-img="22lacura.jpg">
                     <source src="primo.mp3" type="audio/mpeg">
                 </audio>
                 <button onclick="togglePlay('primo')" class="play-btn"><i class="fa-solid fa-play"></i></button>
@@ -235,7 +190,7 @@
                 <img src="22lacura.jpg">
                 <h3>La cura</h3>
                 <h5>22simba</h5>
-                <audio id="cura" data-title="La cura" data-artist="22simba">
+                <audio id="cura" data-title="La cura" data-artist="22simba" data-img="22lacura.jpg">
                     <source src="cura.mp3" type="audio/mpeg">
                 </audio>
                 <button onclick="togglePlay('cura')" class="play-btn"><i class="fa-solid fa-play"></i></button>
@@ -245,7 +200,8 @@
 
     <div id="bellavita-container" class="right">
         <div class="bellavita-background">
-            <button onclick="mostra('home-container')" class="circle"><i class="fa-solid fa-angle-left"></i></button>
+            <button onclick="mostra('home-container')" class="circle back"><i
+                    class="fa-solid fa-angle-left"></i></button>
             <div class="bellavita-high">
                 <img src="ascolto.jpg">
             </div>
@@ -267,6 +223,7 @@
                     </div>
                 </div>
                 <div class="bellavita-right">
+                    <button style="background-color: transparent;  font-size: 1.5em; color: white; border: none; margin-right: .5em;"><i class="fa-solid fa-shuffle"></i></button>
                     <button onclick="togglePlay('intro')" class="play-btn"><i class="fa-solid fa-play"></i></button>
                 </div>
             </div>
@@ -412,7 +369,8 @@
 
     <div id="big5-container" class="right">
         <div class="bellavita-background">
-            <button onclick="mostra('home-container')" class="circle"><i class="fa-solid fa-angle-left"></i></button>
+            <button onclick="mostra('home-container')" class="circle back"><i
+                    class="fa-solid fa-angle-left"></i></button>
             <div class="bellavita-high">
                 <img src="7eleven.png">
             </div>
@@ -434,6 +392,7 @@
                     </div>
                 </div>
                 <div class="bellavita-right">
+                    <button style="background-color: transparent;  font-size: 1.5em; color: white; border: none; margin-right: .5em;"><i class="fa-solid fa-shuffle"></i></button>
                     <button onclick="togglePlay('eleven')" class="play-btn"><i class="fa-solid fa-play"></i></button>
                 </div>
             </div>
@@ -489,7 +448,8 @@
 
     <div id="lacura-container" class="right">
         <div class="progettox-background">
-            <button onclick="mostra('home-container')" class="circle"><i class="fa-solid fa-angle-left"></i></button>
+            <button onclick="mostra('home-container')" class="circle back"><i
+                    class="fa-solid fa-angle-left"></i></button>
             <div class="bellavita-high">
                 <img src="22lacura.jpg">
             </div>
@@ -511,6 +471,7 @@
                     </div>
                 </div>
                 <div class="bellavita-right">
+                    <button style="background-color: transparent;  font-size: 1.5em; color: white; border: none; margin-right: .5em;"><i class="fa-solid fa-shuffle"></i></button>
                     <button onclick="togglePlay('weshine')" class="play-btn"><i class="fa-solid fa-play"></i></button>
                 </div>
             </div>
@@ -607,12 +568,12 @@
                 </button>
             </div>
         </div>
-    </div>
-
+    </div><!--  CHIUSURA LA CURA CONTAINER  -->
 
     <div id="progettox-container" class="right">
         <div class="progettox-background">
-            <button onclick="mostra('home-container')" class="circle"><i class="fa-solid fa-angle-left"></i></button>
+            <button onclick="mostra('home-container')" class="circle back"><i
+                    class="fa-solid fa-angle-left"></i></button>
             <div class="bellavita-high">
                 <img src="progettox.jpg">
             </div>
@@ -634,6 +595,7 @@
                     </div>
                 </div>
                 <div class="bellavita-right">
+                    <button style="background-color: transparent;  font-size: 1.5em; color: white; border: none; margin-right: .5em;"><i class="fa-solid fa-shuffle"></i></button>
                     <button onclick="togglePlay('carteintavola')" class="play-btn"><i
                             class="fa-solid fa-play"></i></button>
                 </div>
@@ -776,13 +738,12 @@
                 </button>
             </div>
         </div>
-    </div>
-    <div id="barra" class="hidden">
+    </div> <!--  CHIUSURA PROGETTOX CONTAINER-->
+
+    <div id="barra" class="hidden" data-current-song="">
         <div class="controls">
             <div class="flex">
-                <img id="song-img" src="" alt=""
-                    style="width: 40px; height: 40px; border-radius: 5px; margin-right: 10px;">
-
+                <img id="song-img" src="" alt="" style="width: 40px; height: 40px; border-radius: 5px; margin-right: 10px;">
                 <div class="info-text">
                     <span id="song-title">Titolo</span>
                     <div>
