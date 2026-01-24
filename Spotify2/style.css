@@ -2,6 +2,9 @@ body {
     border: 0;
     margin: 0;
     background-color: black;
+    padding-bottom: 60px;
+    font-family: 'Playfair Display', serif;
+
 }
 
 .sidebar {
@@ -260,8 +263,40 @@ hr {
     transition: transform 0.3s ease-in-out;
 }
 
-.controls{
+.controls {
     display: flex;
     justify-content: space-around;
     width: 100%;
+}
+
+#playPauseBtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.back {
+    margin: 1em;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+}
+
+.bellavita-left h3 {
+    margin-left: .5em;
+}
+
+.info-text{
+    margin-top: .5em;
+}
+
+.play-btn, .play {
+    transition: transform 0.2s;
+}
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+.bellavita-right{
+    display: flex;
 }
